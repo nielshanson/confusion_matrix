@@ -1,14 +1,9 @@
 # guassian data with power calculations
 
-
-plot(c(-3, 6),c(0, dnorm(0)), type = "n", frame = false, xlab = "Z value", ylab = "")
-
-
-
-
 library(ggplot2)
 draw_plot <- function(mu_0, sigma_0, mu_a, sigma_a, lin) {
     xvals <- seq(-3, 6, length = 1000)
+    
     y2 <- dnorm(xvals, mean = mu_a, sd = sigma_a)
     y1 <- dnorm(xvals, mean = mu_0, sd = sigma_0)
     
@@ -39,7 +34,7 @@ draw_plot <- function(mu_0, sigma_0, mu_a, sigma_a, lin) {
                     colour="black",
                     size=1.25,
                     alpha=0.5) +
-        geom_vline(xintercept = lin, size=2, color="dark orange") +
+        geom_vline(xintercept = lin, size=2, color="black") +
         theme_bw(base_family = "Gill Sans", base_size = 14)
 }
 
