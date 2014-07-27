@@ -5,11 +5,11 @@ shinyUI(pageWithSidebar(
         # markup
         h2('Parameters'),
         h5('Null Distribution'),
-        numericInput('mu_0', 'Null Mean', 0, min=-100, max=100, step=0.1),
+        numericInput('mu_0', 'Null Mean', 0, min=-100, max=100, step=0.2),
         numericInput('sd_0', 'Null Standard Deviation', 1, min=0.1, max=100, step=0.1),
         h5('Alternative Distribution'),
         numericInput('mu_a', 'Alternative Mean', 2, min=-100, max=100, step=0.2),
-        numericInput('sd_a', 'Alternative Standard Deviation', 1, min=0.1, max=100, step=0.2),
+        numericInput('sd_a', 'Alternative Standard Deviation', 1, min=0.1, max=100, step=0.1),
         h5('Classifier'),
         p(em("Hold other variables constant to draw ROC curve")),
         numericInput('lin', 'Decision Boundary', 1, min=-100, max=100, step=0.2),

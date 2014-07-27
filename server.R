@@ -164,6 +164,12 @@ create_ROC_curve <- function(mu_0, sigma_0, mu_a, sigma_a, lin) {
 
 shinyServer(
     function(input, output) {
+        # reset environment
+        my.env$ROCvalues_x <- NULL # x,y,lin values of the ROC curve
+        my.env$ROCvalues_y <- NULL
+        my.env$ROClin <- NULL
+        my.env$ROC_param <- NULL
+        
         # create distribution plot
         output$newPlot <- renderPlot({
             draw_distribution_plot(input$mu_0,
