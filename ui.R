@@ -19,27 +19,25 @@ shinyUI(pageWithSidebar(
         ),
     mainPanel(
         h3('Comparing Distributions'),
-        p('Here we compare two Normal distributions based on the paramters that you supplied. We
-          also show in the graph the relative areas of correct outcomes, True Positives (TP) and 
-          True Negatives (TN),  and incorrect outcomes, Type-1 Errors or False Positives (FP) and 
-          Type-2 Errors or False Negatives (FN).'),
+        p('Here we compare two Normal distributions based on the set paramters. In the graph the 
+          relative areas of correct outcomes, True Positives (TP) and True Negatives (TN), 
+          and incorrect outcomes, Type-1 Errors or False Positives (FP) and Type-2 Errors 
+          or False Negatives (FN), are highlighted.'),
           p(em("This figure plots the Null and Alternative distributions according to their current
                 paramters and decision boundary. Try changing the mean, standard deveations,
                 and the decision boundary to update the figures and tables below.")),
           plotOutput('newPlot'),
           h4('Performance Evaluation with Confusion Tables'),
-          p(withMathJax("A common task in statistics and in particular the increasingly popular area of
-                       Machine Learning is the assessment of a binary classifier like the simplisitic
-              one above. However, performance is often a balance between the two error types
-              and can be somewhat multi-faceted depending on the potential application concerns
-              of the classifier.")),
+          p(withMathJax("A common task in statistics and Machine Learning is the assessment 
+              of a binary classifier like the simple one above. However, performance is often 
+              a balance between the two error types and can be somewhat multi-faceted 
+              depending on the potential application concerns of the classifier.")),
           p(em("This table shows the areas and derived performance statistics of the current 
                distributions and decision boundary above.")),
-          p(strong(("Warning: Doesn't work properly when Null and Alternative are reversed."))),
           tableOutput("table"),
           h4('Performance Evaluation with Reciever Operating Characteristic Curves (ROC-Curve)'),
           p('One common way of evaluating the overall effectiveness of a binary classifer 
-             accross decision boundaries is via an ROC curve. The True Positive Rate Specificity 
+             accross a range of decision boundaries is via an ROC curve. The True Positive Rate Specificity 
              is plotted against the False Positive Rate (1-Sensitivity). Classifiers with curves
              that plot closer to the upper left-hand corner are considered better (a random classifer
              is a diagonal line). One statistic to assess a classifier\'s performance here is the Area
@@ -48,7 +46,6 @@ shinyUI(pageWithSidebar(
                Alter the decision boundary while keeping all other settings constant and the ROC curve
                will be generated between the ROC points currently calculated. Changing the distribution
                parameters will reset the plot.")),
-          p(strong(("Warning: Doesn't work properly when Null and Alternative are reversed."))),
           plotOutput('ROC_plot')
     )
 ))
