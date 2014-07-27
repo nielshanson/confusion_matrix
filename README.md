@@ -7,5 +7,6 @@ The application is currently deployed on Shiny.io (<https://www.shinyapps.io/>):
 
 <http://nielshanson.shinyapps.io/confusion_matrix/>
 
-Presentation pitch for the App can be found on RPubs.
+A presentation pitch for the App can be found on RPubs:
+
 <http://rpubs.com/nielshanson/deconfusion>
