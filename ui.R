@@ -1,6 +1,6 @@
 library(shiny)
 shinyUI(pageWithSidebar(
-    headerPanel("De-confusing the Confusion Table"),
+    headerPanel("De-Confusion Tables"),
     sidebarPanel(
         # markup
         h2('Parameters'),
